@@ -1,0 +1,231 @@
+/*************************
+	CSS Reset
+*************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*************************
+	Personal
+*************************/
+a {
+	text-decoration: none;
+}
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 400px;
+	background: #aed0d8;
+	transition: 0.5s;
+	z-index: 2;
+}
+header .accent {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+header .triangle {
+	position: absolute;
+	left: 0;
+	bottom: -119px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 131px 228px 0 228px;
+	border-color: #aed0d8 transparent transparent transparent;
+}
+
+header .top-logo {
+	position: absolute;
+	top: 25px;
+	left: 30px;
+	height: 455px;
+	width: 395px;
+}
+header .top-logo img {
+	width: 395px;
+	height: 455px;
+	object-fit: cover;
+}
+
+header .tagline {
+	position: absolute;
+	left: 455px;
+	bottom: 115px;
+	width: calc(100% - 455px);
+	height: 68px;
+	line-height: 68px;
+	font-size: 68px;
+	font-family: 'rift', sans-serif;
+	font-weight: 600;
+	font-style: normal;
+	color: #ffffff;
+	text-shadow: -2px 0 0 #231f20;
+}
+
+header .accent {
+	position: absolute;
+	top: -183px;
+	right: -65px;
+	height: 465px;
+	width: 100%;
+	background: url(images/headerCombs.svg);
+	background-position: top right;
+	background-repeat: no-repeat;
+}
+
+nav {
+	position: absolute;
+	bottom: 30px;
+	left: 455px;
+	width: calc(100% - 485px);
+	height: 60px;
+}
+
+nav a {
+	display: inline-block;
+	width: calc((100% / 3) - 23px);
+	height: 60px;
+	line-height: 60px;
+	background: #e3ac42;
+	transform: skew(25deg);
+	margin-right: 15px;
+	text-align: center;
+	color: #231f20;
+	font-family: 'rift', sans-serif;
+	font-size: 30px;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+nav a span {
+	display: block;
+	transform: skew(-25deg);
+}
+nav a span img {
+	height: 30px;
+	width: 30px;
+	margin: 0 10px -5px 0;
+	object-fit: cover;
+}
+
+header .scroll-logo {
+	display: none;
+	height: 80px;
+	line-height: 80px;
+	font-family: 'rift', sans-serif;
+	font-size: 50px;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #ffffff;
+	text-shadow: -2px 0 0 #231f20;
+}
+header .scroll-logo img {
+	height: 50px;
+	width: 50px;
+	object-fit: cover;
+	float: left;
+	margin: 15px;
+}
+
+section {
+	background: #ffffff;
+	font-family: 'myriad-pro', sans-serif;
+	font-style: normal;
+	font-weight: 300px;
+	font-size: 1.6em;
+	line-height: 160%;
+	overflow: hidden;
+	position: relative;
+}
+
+section.first {
+	margin-top: 400px;
+}
+
+section.main {
+	color: #2f3443;
+	padding: 100px 40px 180px 455px;
+	background: url(images/sectionCombs.svg);
+	background-position: -100px -150px;
+	background-repeat: no-repeat;
+	background-size: 500px;
+}
+section.alt {
+	color: #ffffff;
+	background: #2f3543 url(images/beeLine.svg);
+	background-position: calc(100% - 75px) 50px;
+	background-repeat: no-repeat;
+	background-size: 300px;
+	transform: skewY(5deg);
+	margin-top: -100px;
+	padding: 100px 455px 100px 40px;
+}
+section.alt span {
+	display: block;
+	transform: skewY(-5deg);
+	margin-bottom: 20px;
+}
+section p {
+	margin-bottom: 40px;
+}
+
+footer {
+	width: 100%;
+	background: #aed0d9;
+	padding: 100px 100px 50px 100px;
+	margin-top: -70px;
+	box-sizing: border-box;
+	font-family: 'myriad-pro', sans-serif;
+	font-weight: bold;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	color: #2f3543;
+}
+footer img {
+	height: 50px;
+	margin: 0 20px 10px 0;
+}
